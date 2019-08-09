@@ -18,16 +18,17 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            //   Day class's method are to be cut & paste into 30 Days of Code 
-            //  on https://www.hackerrank.com to check against it's tests.
-            //
-            //  Please read the code in the method to know what type of data
-            // is needed. The methods work in Visual Studio.
-
-            //  Uncomment out the Day Class you want to execute.
+             // Logon onto: https://www.hackerrank.com
+             // and cut & paste Day class's method into 30 Days of Code 
+             // to check against it's tests.
+             //
+             // Please read the code in the method to know what type of data
+             // is needed. The methods work in Visual Studio.
+             //
+             // Uncomment out the Day Class you want to execute.
             
-            // Day0_HelloWorld.HelloWorld();
-            // Day1_DataTypes.DataTypes();
+             // Day0_HelloWorld.HelloWorld();
+             // Day1_DataTypes.DataTypes();
         }
     }
 }
