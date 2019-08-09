@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HackerRank._30DaysOfCode
 {
-   public class Day0_HelloWold
+   public class Day0_HelloWorld
     {
         public static void HelloWorld()
         {

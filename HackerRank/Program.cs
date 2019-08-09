@@ -18,8 +18,8 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            Day0_HelloWold.HelloWorld();
-            Day1_Data_Types.DataTypes();
+            Day0_HelloWorld.HelloWorld();
+            Day1_DataTypes.DataTypes();
         }
     }
 }

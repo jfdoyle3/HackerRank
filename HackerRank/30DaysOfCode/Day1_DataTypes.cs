@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HackerRank
 {
-    class Day1_Data_Types
+    class Day1_DataTypes
     {
         public static void DataTypes()
         {
