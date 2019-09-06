@@ -35,6 +35,8 @@ namespace HackerRank
             // Day3_Intro_to_Conditional_Statements.Conditional();
             // Day4_Class_vs_Instance.Person.PersonClass();
             // Day5_Loops.Loop();
+            // Day6_Lets_Review.LetsReview();
+            Day8_Dictionaries_and_Maps.Dictionaries_and_Maps();
         }
     }
 }
