@@ -36,7 +36,10 @@ namespace HackerRank
             // Day4_Class_vs_Instance.Person.PersonClass();
             // Day5_Loops.Loop();
             // Day6_Lets_Review.LetsReview();
-            Day8_Dictionaries_and_Maps.Dictionaries_and_Maps();
+            // Day8_Dictionaries_and_Maps.Dictionaries_and_Maps();
+            // Day9_Recursion3.Recursion3();
+            Day10_Binary_Numbers.BinaryNumbers();
+
         }
     }
 }
