@@ -39,7 +39,9 @@ namespace HackerRank
             // Day8_Dictionaries_and_Maps.Dictionaries_and_Maps();
             // Day9_Recursion3.Recursion3();
             // Day10_Binary_Numbers.BinaryNumbers();
-            Day11_2D_Arrays.twoDArray();
+            // Day11_2D_Arrays.twoDArray();
+            // Day12_Inheritance;
+
         }
     }
 }
