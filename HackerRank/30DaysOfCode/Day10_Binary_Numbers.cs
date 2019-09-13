@@ -26,47 +26,58 @@ namespace HackerRank
             //Binary:    r:     0       1      0     0       0       1   flip: 100010 =34
             // Base 10: 34 | 2/34=17 2/17=8  2/8=4  2/4=2   2/2=1   2/1=0
             //int[] binaryNum = { 1, 0, 1 ,1}; // Bsse 10 = 13 ,  2 consecitive 1s.
-            //double power = 4;
-            //double based =2;
-            //double topow=Math.Pow(based,power);
 
-            //Console.WriteLine(topow);
             List<int> binaryNum = new List<int>();
+            Console.WriteLine("Input a number to be converted to binary");
             int base10 = Convert.ToInt32(Console.ReadLine());
-            int count=0;
+            int counter=0;
+            int total = 0;
+            //int[] count = new int[0];
+            List<int> count = new List<int>();
 
             while (base10>0)
             {
                 int quotient = base10 /2;
                 int remainder = base10 % 2;
-                binaryNum.Add(remainder);
                 base10 = quotient;
-            }
+               //   Console.WriteLine("remain: {0}",remainder);
+                binaryNum.Add(remainder);
+                
+            } 
+           binaryNum.Reverse();
+            
 
-            binaryNum.Reverse();
 
             for (int index = 0; index < binaryNum.Count; index++)
             {
-                
-                if (binaryNum[index] == 1 && index<binaryNum.Count)
+
+                if (binaryNum[index] == 1)
                 {
-                    count++;
-                 
-
+                    counter++;
+                    total = counter;
+                    count.Add(total);
+                    //count[index] = total;
                 }
-               else
-                   count = 0;
+                else
+                    counter  = 0;
 
+                //if(total > index)
 
-                Console.WriteLine("Index{0}:   {1}", index, binaryNum[index]);
-
+             //   Console.WriteLine("Index{0}:   {1}", index, binaryNum[index]);
+                
             }
-            //binaryNum.Reverse();
+            count.Sort();
+            count.Reverse();
+
+
+            foreach (int item in count)
+                Console.Write("{0}, ", item);
+            Console.WriteLine();
             foreach (int number in binaryNum)
                 Console.Write(number);
 
             Console.WriteLine("\n--------------");
-            Console.WriteLine("Count:  {0}",count);
+            Console.WriteLine("\n\nCount:  {0}", count[0]);
         }
     }
 }
