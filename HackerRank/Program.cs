@@ -38,7 +38,7 @@ namespace HackerRank
             // Day6_Lets_Review.LetsReview();
             // Day8_Dictionaries_and_Maps.Dictionaries_and_Maps();
             // Day9_Recursion3.Recursion3();
-            Day10_Binary_Numbers.BinaryNumbers();
+            // Day10_Binary_Numbers.BinaryNumbers();
 
         }
     }

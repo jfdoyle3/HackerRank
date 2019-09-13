@@ -17,19 +17,25 @@ namespace HackerRank
 
             int row = 0;
             int col = 0;
-            int x = 3;
-            int y = 3;
+            int start = 0;
+            int top = 3;
+            int middle = 3;
+            int bottom = 3;
 
 
-            for (int c = 0; c < y; c++)
-            {
-                for (int r = 0; r < x; c++)
-                {
-                    row += arr[c][r];
-                }
-                col += row;
-            }
-            Console.Write(col);
-        }  
+
+
+
+            // for (int c = 0; c < arr[0].Length; c++)
+            //  {
+            //     for (int r = 0; r < arr[c].Length; r++)
+            //     {
+            //         row += arr[c][r];
+            //     }
+            //     col += row;
+            // }
+            // Console.Write(row);
+
+        }
     }
 }
