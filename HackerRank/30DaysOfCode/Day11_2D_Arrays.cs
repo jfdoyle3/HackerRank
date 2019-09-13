@@ -9,32 +9,35 @@ namespace HackerRank
         public static void twoDArray()
         {
             int[][] arr = new int[6][];
+            string input ="1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 2 4 4 0 0 0 0 2 0 0 0 0 1 2 4 0" ;
             for (int i = 0; i < 6; i++)
             {
-                arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                arr[i] = Array.ConvertAll(input.Split(' '), arrTemp => Convert.ToInt32(arrTemp));
 
             }
 
-            int row = 0;
-            int col = 0;
-            int start = 0;
-            int top = 3;
-            int middle = 3;
-            int bottom = 3;
 
+            int top = 0;
+            int middle = 0;
+            int bottom = 0;
+            int counter = 0;
+            List<int> counts = new List<int>();
 
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    top = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+                    middle = arr[i + 1][j + 1];
+                    bottom = arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                    counter = top + middle + bottom;
+                    counts.Add(counter);
+                }
+            }
+            counts.Sort();
+            counts.Reverse();
 
-
-
-            // for (int c = 0; c < arr[0].Length; c++)
-            //  {
-            //     for (int r = 0; r < arr[c].Length; r++)
-            //     {
-            //         row += arr[c][r];
-            //     }
-            //     col += row;
-            // }
-            // Console.Write(row);
+            Console.Write("{0}", counts[0]);
 
         }
     }
