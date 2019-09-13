@@ -17,12 +17,13 @@ namespace HackerRank
 
             int row = 0;
             int col = 0;
-           // int total = 0;
+            int x = 3;
+            int y = 3;
 
 
-            for (int c = 0; c < arr.Length; c++)
+            for (int c = 0; c < y; c++)
             {
-                for (int r = 0; r < arr[c].Length; c++)
+                for (int r = 0; r < x; c++)
                 {
                     row += arr[c][r];
                 }
