@@ -26,6 +26,7 @@ namespace HackerRank
             // is needed. The methods work in Visual Studio.
             //
             // Uncomment out the Day Class you want to execute.
+            // Some won't work , need to be cut and pasted into problem.
 
             // 30 Days of Code
             //------------------
@@ -41,6 +42,7 @@ namespace HackerRank
             // Day10_Binary_Numbers.BinaryNumbers();
             // Day11_2D_Arrays.twoDArray();
             // Day12_Inheritance;
+            // Day13_Abstract_Class;
 
         }
     }
