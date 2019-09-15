@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-class Solution
-{
+﻿//using System;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Linq;
+//class Solution
+//{
 
-    static void Main(String[] args)
-    {
-        string S = Console.ReadLine();
+//    static void Main(String[] args)
+//    {
+//        string S = Console.ReadLine();
 
-        try
-        {
-            int res = Int32.Parse(S);
-            Console.WriteLine(res);
+//        try
+//        {
+//            int res = Int32.Parse(S);
+//            Console.WriteLine(res);
 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Bad String");
-        }
-    }
-}
+//        }
+//        catch (Exception e)
+//        {
+//            Console.WriteLine("Bad String");
+//        }
+//    }
+//}
