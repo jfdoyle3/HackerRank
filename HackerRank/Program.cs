@@ -46,8 +46,10 @@ namespace HackerRank
             // Day14_Scope;
             // Day15_LinkedLists.LinkedList();
             // Day16_Exceptions-String_to_Integer;
-             Day17_More_Exceptions.Power();
-            // Day18;
+            // Day17_More_Exceptions.Power();
+            // Day18_Queues_Stacks;
+            // Day19_Interfaces;
+
 
         }
     }
