@@ -10,12 +10,13 @@ namespace HackerRank.Practise.Algorithms.Warmups
         {
             int count = 1;
             Array.Sort(ar);
-            Array.Reverse(ar);
             if (ar[0] == ar[ar.Length - 1])
             {
                 count = ar.Length;
                 return count;
             }
+
+            Array.Reverse(ar);
 
             for (int i = 0; i < ar.Length; i++)
             {
