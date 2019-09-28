@@ -6,16 +6,14 @@ namespace HackerRank.Practise.Algorithms.Warmups
 {
     class BirthdayCandles
     {
-        public static void birthdayCandles()
+        public int birthdayCandles()
         {
-            int count = 1;
+            int[] ar = { 1, 1, 1, 1 };
             Array.Sort(ar);
-            if (ar[0] == ar[ar.Length - 1])
-            {
-                count = ar.Length;
-                return count;
-            }
+            if (ar[0] == ar[ar.Length - 1])        
+                return ar.Length;
 
+            int count = 1;
             Array.Reverse(ar);
 
             for (int i = 0; i < ar.Length; i++)
