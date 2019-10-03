@@ -9,32 +9,25 @@ namespace HackerRank.Practise.Algorithms.Warmups
     {
         public static void Sock_Merchant()
         {
-            int[] ar = { 10, 20, 20, 10, 10, 30, 50, 10, 20 };
+            int[] ar = { 4, 5, 5, 5, 6, 6, 4, 1, 4, 4, 3, 6, 6, 3, 6, 1, 4, 5, 5, 5 };
+
             Array.Sort(ar);
-            List<int> list = ar.ToList();
             int count = 0;
-            int index = 0;
+            
 
-            while (index < ar.Length)
-                for (int i = 0; i < list.Count; i++)
+            for (int j = 0; j < ar.Length-1;  j++)
+            {
+                Console.WriteLine("{0} |  {1}",ar[j],ar[j+1]);
+
+                if (ar[j] == ar[j + 1])
                 {
-                    if (list[0] == list[1])
-                    {
-                        Console.Write("list: ");
-                        foreach (int num in list)
-                        {
-                            Console.Write("{0}, ", num);
-                        }
-                        Console.WriteLine("\n i: {0}", i);
-                        count++;
-                        list.RemoveRange(0, 1);
-
-                    }
-                    // else
-                    //     break;
+                    count++;
+                    j++;
                 }
 
-            Console.WriteLine("end: {0}", count);
+            }
+
+           Console.WriteLine("end: {0}", count);
         }
     }
 }
