@@ -12,7 +12,8 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 using HackerRank._30DaysOfCode;
-using HackerRank.Practise.Algorithms.Warmups;
+using HackerRank.Practise.Algorithms.WarmupsChallenges;
+
 namespace HackerRank
 {
     class Program
@@ -50,8 +51,13 @@ namespace HackerRank
             // Day17_More_Exceptions.Power();
             // Day18_Queues_Stacks;
             // Day19_Interfaces;
-            SockMerchant.Sock_Merchant();
+            Day25_RunningTimeAndComplexity.Time();
 
+
+            // WarmUp Challenges
+            // -----------------------
+            // SockMerchant.Sock_Merchant();
+            // CountingValleys.VallyCount();
 
         }
     }
