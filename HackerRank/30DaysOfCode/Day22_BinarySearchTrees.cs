@@ -14,7 +14,7 @@ class Solution
 
     static int getHeight(Node root)
     {
-        Node travLeft, travRight;
+        Node travLeft, travRight, travLeftRight, travRightLeft;
         int leftBranchCount, rightBranchCount, branchRunLeft, branchRunRight;
 
         branchRunLeft = branchRunRight = leftBranchCount = rightBranchCount = 0;
@@ -35,8 +35,16 @@ class Solution
             }
             else
             {
-                results[0] = leftBranchCount;
-                branchRunLeft = 1;
+                if (travLeft.right != null)
+                {
+                    travLeft = travLeft.right;
+                    leftBranchCount++;
+                }
+                else
+                {
+                    results[0] = leftBranchCount;
+                    branchRunLeft = 1;
+                }
             }
 
             if (travRight.right != null)
@@ -46,14 +54,25 @@ class Solution
             }
             else
             {
-                results[1] = rightBranchCount;
-                branchRunRight = 1;
+                if (travRight.left != null)
+                {
+                    travRight = travRight.left;
+                    rightBranchCount++;
+                }
+
+                else
+                {
+                    results[1] = rightBranchCount;
+                    branchRunRight = 1;
+                }
             }
             if (branchRunLeft == 1 && branchRunRight == 1)
                 finished = true;
 
         } while (!finished);
-        //  Console.WriteLine("results: L:{0} | R:{1}",results[0],results[1]);
+
+        //Console.WriteLine("results: L:{0} | R:{1}",results[0],results[1]);
+        //  Console.WriteLine("Left branch Main: {0}",results[0]);
         if (results[0] > results[1])
             return results[0];
         else
