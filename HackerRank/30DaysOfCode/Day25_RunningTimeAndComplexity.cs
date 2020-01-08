@@ -8,19 +8,32 @@ namespace HackerRank._30DaysOfCode
     {
         public static void Time()
         {
-            int number = 5;
-            int count = 0;
-            for (int i = 1; i <= number; i++)
+            string T = Console.ReadLine().Trim();
+            int testCase = Int32.Parse(T);
+            StringBuilder results = new StringBuilder();
+
+            for (int tCase = 0; tCase < testCase; tCase++)
             {
-                if (number % i == 0)
+                string strnum = Console.ReadLine();
+                int number = Int32.Parse(strnum);
+
+                int count = 0;
+               
+                for (int i = 1; i <= number; i++)
                 {
-                    count++;
+                    if (number % i == 0)
+                    {
+                        count++;
+                    }
                 }
+                //   string result = count <= 2 ? "Prime" : "Not Prime";
+                if (count <= 2)
+                    results.Append("Prime");
+                else
+                    results.Append("Not Prime");
+
+                Console.Write(results.ToString());
             }
-            if (count == 2 || count==1)
-                Console.WriteLine("Prime");
-            else
-                Console.WriteLine("Not Prime");
         }
     }
 }

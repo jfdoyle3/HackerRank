@@ -13,6 +13,7 @@ using System.Text;
 using System;
 using HackerRank._30DaysOfCode;
 using HackerRank.Practise.Algorithms.WarmupsChallenges;
+using HackerRank.Practise.Arrays;
 
 namespace HackerRank
 {
@@ -51,13 +52,16 @@ namespace HackerRank
             // Day17_More_Exceptions.Power();
             // Day18_Queues_Stacks;
             // Day19_Interfaces;
-            Day25_RunningTimeAndComplexity.Time();
+            // Day25_RunningTimeAndComplexity.Time();
 
 
             // WarmUp Challenges
             // -----------------------
             // SockMerchant.Sock_Merchant();
             // CountingValleys.VallyCount();
+
+            // Practice
+            LeftRotation.MoveLeft();
 
         }
     }
