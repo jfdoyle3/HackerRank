@@ -14,7 +14,7 @@ class Solution
 
     static int getHeight(Node root)
     {
-        Node travLeft, travRight, travLeftRight, travRightLeft;
+        Node travLeft, travRight;
         int leftBranchCount, rightBranchCount, branchRunLeft, branchRunRight;
 
         branchRunLeft = branchRunRight = leftBranchCount = rightBranchCount = 0;
@@ -28,23 +28,23 @@ class Solution
 
         do
         {
+
             if (travLeft.left != null)
             {
                 travLeft = travLeft.left;
                 leftBranchCount++;
             }
-            else
+
+            if (travLeft.right != null)
             {
-                if (travLeft.right != null)
-                {
-                    travLeft = travLeft.right;
-                    leftBranchCount++;
-                }
-                else
-                {
-                    results[0] = leftBranchCount;
-                    branchRunLeft = 1;
-                }
+                travLeft = travLeft.right;
+                leftBranchCount++;
+            }
+
+            if (travLeft.left == null && travLeft.right == null)
+            {
+                results[0] = leftBranchCount;
+                branchRunLeft = 1;
             }
 
             if (travRight.right != null)
@@ -52,19 +52,16 @@ class Solution
                 travRight = travRight.right;
                 rightBranchCount++;
             }
-            else
-            {
-                if (travRight.left != null)
-                {
-                    travRight = travRight.left;
-                    rightBranchCount++;
-                }
 
-                else
-                {
-                    results[1] = rightBranchCount;
-                    branchRunRight = 1;
-                }
+            if (travRight.left != null)
+            {
+                travRight = travRight.left;
+                rightBranchCount++;
+            }
+            if (travRight.left == null && travRight.right == null)
+            {
+                results[1] = rightBranchCount;
+                branchRunRight = 1;
             }
             if (branchRunLeft == 1 && branchRunRight == 1)
                 finished = true;
