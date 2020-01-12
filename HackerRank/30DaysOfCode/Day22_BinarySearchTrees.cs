@@ -34,8 +34,13 @@ class Solution
                 travLeft = travLeft.left;
                 leftBranchCount++;
             }
-            
-            if (travLeft.right != null && travLeft.left==null)
+            if (travLeft.left != null && travLeft.right == null)
+            {
+                travLeft = travLeft.left;
+                leftBranchCount++;
+            }
+
+            if (travLeft.right != null)
             {
                 travLeft = travLeft.right;
                 leftBranchCount++;
