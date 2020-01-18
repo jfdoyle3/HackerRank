@@ -34,16 +34,22 @@ class Solution
                 travLeft = travLeft.left;
                 leftBranchCount++;
             }
-            if (travLeft.left != null && travLeft.right == null)
-            {
-                travLeft = travLeft.left;
-                leftBranchCount++;
-            }
-
-            if (travLeft.right != null)
+            else if (travLeft.right != null)
             {
                 travLeft = travLeft.right;
                 leftBranchCount++;
+            }
+
+
+            if (travRight.right != null)
+            {
+                travRight = travRight.right;
+                rightBranchCount++;
+            }
+            else if (travRight.left != null)
+            {
+                travRight = travRight.left;
+                rightBranchCount++;
             }
 
             if (travLeft.left == null && travLeft.right == null)
@@ -52,29 +58,17 @@ class Solution
                 branchRunLeft = 1;
             }
 
-            if (travRight.right != null)
-            {
-                travRight = travRight.right;
-                rightBranchCount++;
-            }
-
-            if (travRight.left != null)
-            {
-                travRight = travRight.left;
-                rightBranchCount++;
-            }
             if (travRight.left == null && travRight.right == null)
             {
                 results[1] = rightBranchCount;
                 branchRunRight = 1;
             }
+
             if (branchRunLeft == 1 && branchRunRight == 1)
                 finished = true;
 
         } while (!finished);
 
-        //Console.WriteLine("results: L:{0} | R:{1}",results[0],results[1]);
-        //  Console.WriteLine("Left branch Main: {0}",results[0]);
         if (results[0] > results[1])
             return results[0];
         else
