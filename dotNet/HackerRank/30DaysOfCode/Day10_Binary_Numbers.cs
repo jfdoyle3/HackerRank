@@ -25,7 +25,7 @@ namespace HackerRank
 
             //Binary:    r:     0       1      0     0       0       1   flip: 100010 =34
             // Base 10: 34 | 2/34=17 2/17=8  2/8=4  2/4=2   2/2=1   2/1=0
-            //int[] binaryNum = { 1, 0, 1 ,1}; // Bsse 10 = 13 ,  2 consecitive 1s.
+            //int[] binaryNum = { 1, 0, 1 ,1}; // Base 10 = 13 ,  2 consecetive 1s.
 
             List<int> binaryNum = new List<int>();
             Console.WriteLine("Input a number to be converted to binary");
