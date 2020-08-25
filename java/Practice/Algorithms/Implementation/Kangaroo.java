@@ -9,33 +9,26 @@ import java.util.regex.*;
 public class Solution {
 
     // Complete the kangaroo function below.
-    static String kangaroo(int x1, int v1, int x2, int v2) {
-        System.out.printf("roo 1  x1: %d | v1: %d%nroo 2  x2: %d | v2: %d%n",x1,v1,x2,v2);
-      
+    static String kangaroo(int x1, int v1, int x2, int v2) {      
         int roo1Start=x1;
         int roo1HopDistance=v1;
         int roo2Start=x2;
         int roo2HopDistance=v2;
-
+		int idx=0;
+		
         if (roo2Start>roo1Start && roo2HopDistance>roo1HopDistance){
             return "NO";
         }
 
-    int idx=0;
         do{
-
            int   roo1Hops=roo1Start+idx*roo1HopDistance;
            int  roo2Hops=roo2Start+idx*roo2HopDistance;
-        //    System.out.printf("Roo 1 hops: %d ||Roo 2 hops: %d %n",roo1Hops,roo2Hops);
             if(roo1Hops== roo2Hops){
                 return "YES";
             }
             idx++;
         }while(idx<10000);
             return "NO";
-
-
-   
     }
 
     private static final Scanner scanner = new Scanner(System.in);
