@@ -8,9 +8,8 @@ import java.util.regex.*;
 
 public class Solution {
 
-    // Complete the riddle function below.
    static long[] riddle(long[] arr) {
-        // complete this function
+
         List<Object[]> arrayList = new ArrayList<Object[]>();
         List<Long> longList = new ArrayList<Long>();
         long[] newArr = {1};
