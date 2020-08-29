@@ -23,8 +23,8 @@ public class Solution {
            
          }
          for (Map.Entry entry : charMap.entrySet()) { 
-          //  System.out.println(entry.getKey() + " " + entry.getValue());
-            System.out.println(entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue());
+         //  System.out.println(entry.getValue());
             
              
         } 
