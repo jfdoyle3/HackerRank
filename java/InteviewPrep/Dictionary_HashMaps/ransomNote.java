@@ -8,7 +8,6 @@ import java.util.regex.*;
 
 public class Solution {
 
-    // Complete the checkMagazine function below.
     static void checkMagazine(String[] magazine, String[] note) {
         HashMap<String, Integer> words=new HashMap<String, Integer>();
         int wordCount=0;
@@ -19,31 +18,22 @@ public class Solution {
             } else{
                 words.put(word,1);
             }
-
         }
-  
-         for(String noteWord : note){       
-     //   System.out.println(noteWord);
-     //   System.out.println(word.getKey() + "=" + word.getValue());
-            if(words.containsKey(noteWord)){
-              //  wordCount++;
+
+        for(String noteWord : note){       
+            if(words.containsKey(noteWord) && words.get(noteWord)>=1){
+              wordCount++;
               int value=words.get(noteWord);
               value--;
               words.put(noteWord,value);
-           // System.out.println(value);
-
-            }else {
-                System.out.println("Nay");
             }
-         }
-
-        System.out.println(words);
-        // if(counter==noteLengh){
-        //     System.out.println("Yes");
-        // }else {
-        //     System.out.println("No");
-        // }
-        
+        }
+    
+        if(wordCount==noteLength){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 
     private static final Scanner scanner = new Scanner(System.in);
