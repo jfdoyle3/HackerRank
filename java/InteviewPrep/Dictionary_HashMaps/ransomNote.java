@@ -21,7 +21,7 @@ public class Solution {
             }
 
         }
-        for (Map.Entry<String, Integer> word : words.entrySet()) {
+  
          for(String noteWord : note){       
      //   System.out.println(noteWord);
      //   System.out.println(word.getKey() + "=" + word.getValue());
@@ -36,7 +36,7 @@ public class Solution {
                 System.out.println("Nay");
             }
          }
-        }
+
         System.out.println(words);
         // if(counter==noteLengh){
         //     System.out.println("Yes");
