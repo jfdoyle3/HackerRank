@@ -10,20 +10,18 @@ public class Solution {
 
     // Complete the isValid function below.
     static String isValid(String s) {
-        String result="NO";
-    
-       HashMap<String, Integer> charMap = new HashMap<String, Integer>();
-       String charArray[]= s.split("");
+         String charArray[]= s.split("");
+		 HashMap<String, Integer> charMap = new HashMap<String, Integer>();
+		String result="NO";     
          for (String chars : charArray){
              if (charMap.containsKey(chars)){
                 charMap.put(chars,charMap.get(chars)+1);
             } else{
                 charMap.put(chars,1);
             }
-           
          }
-         for (Map.Entry entry : charMap.entrySet()) { 
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        for (Map.Entry entry : charMap.entrySet()) { 
+         //   System.out.println(entry.getKey() + " " + entry.getValue());
          //  System.out.println(entry.getValue());
             
              
