@@ -11,15 +11,7 @@ public class Solution {
     // Complete the climbingLeaderboard function below.
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
         int[] result={1,2,3,4};
-        HashMap<Integer,Integer> leaderBoard=new HashMap<Integer,Integer>();
-        for (int idx=0; idx<scores.length; idx++){
-            if (leaderBoard.containsKey(scores[idx])){
-                leaderBoard.put(scores[idx],leaderBoard.get(scores[idx])+1);
-            } else {
-                leaderBoard.put(scores[idx],1);
-            }
-        }
-        System.out.println(leaderBoard);
+       
         return result;
     }
 
