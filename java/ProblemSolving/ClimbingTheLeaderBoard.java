@@ -10,10 +10,29 @@ public class Solution {
 
     // Complete the climbingLeaderboard function below.
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
-        int[] result={1,2,3,4};
-       
-        return result;
+        int results[]={1,2,3,4};
+        List<Integer> listResults=new ArrayList<Integer>();
+        // System.out.println(searchBoard(scores,5));
+       // searchBoard(scores,50)
+        System.out.println(roundUp(5));
+        
+        return results;
+
     }
+
+    static int searchBoard(int [] board, int key){
+        for(int idx=0; idx<board.length; idx++){
+            if(board[idx]==key){
+                return idx;
+            } else if ()
+        } 
+        return -1;
+    }
+    static int roundUp(int num){
+        int roundUp=Math.round(num/10.0) * 10;
+         return roundUp;
+    }
+
 
     private static final Scanner scanner = new Scanner(System.in);
 
