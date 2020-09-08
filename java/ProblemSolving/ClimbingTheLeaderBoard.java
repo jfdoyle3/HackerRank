@@ -8,44 +8,31 @@ import java.util.regex.*;
 
 public class Solution {
 
+    // Complete the climbingLeaderboard function below.
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
-    
-    
-     for (int aliceScores : alice){
-        int alicePositions=searchBoard(scores,aliceScores);
+        int[] staticResult={-1000000};
+        int[] result=new int[alice.length];
 
-        System.out.println("p: "+alicePositions+" | s: "+aliceScores);
-       
-    //    if (alicePositions==0){
-    //      listResults.add(1);
-    //     }else{
-         listResults.add(alicePositions);
-        // }
+     for (int idx=0; idx<alice.length; idx++){
+        int alicePositions=searchBoard(scores,alice[idx]);
+        System.out.println("p: "+alicePositions+" | s: "+alice[idx]);
+        result[idx]=alicePositions;
+         }
+        return result;
     }
- // --------------------------------   
-     Object[] obResults=listResults.toArray();
-     int[] results=toIntArray(obResults);
-
-     return results;
-    }
- // ---------------   
+ // -------end bracket for main method
+    // create methods here
+    //-----------------------------
     static int searchBoard(int[] board, int score){
-        for (int idx=0; idx<board.length; idx++){
-            if(board[idx]==score){
-				return idx;
-        }
-         return -1;
-    }
+        for(int idx=0; idx<board.length; idx++){
+            if (board[idx]==score){
+                return idx;
+            }
 
-    static int[] toIntArray( Object[] objectArray){
-        int length=objectArray.length;
-        int[] intArray=new int[length];
-        for(int idx=0; idx<length; idx++){
-            intArray[idx]=(int) objectArray[idx];
         }
-        return intArray;
-    } 
-//-----------------------
+        return -1;
+    }
+    // -----------------------------
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
