@@ -12,9 +12,11 @@ public class Solution {
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
         int[] staticResult={-1000000};
         int[] result=new int[alice.length];
-
+        int length=scores.length-1;
      for (int idx=0; idx<alice.length; idx++){
-        int alicePositions=searchBoard(scores,alice[idx]);
+   //    int alicePositions=searchBoard(scores,alice[idx]);
+     int alicePositions=recursionSearch(scores,0,length,alice[idx]);
+       // int alicePositions=searchBoard(scores,5);
         System.out.println("p: "+alicePositions+" | s: "+alice[idx]);
         result[idx]=alicePositions;
          }
@@ -23,14 +25,17 @@ public class Solution {
  // -------end bracket for main method
     // create methods here
     //-----------------------------
-    static int searchBoard(int[] board, int score){
-        for(int idx=0; idx<board.length; idx++){
-            if (board[idx]==score){
-                return idx;
-            }
-
-        }
-        return -1;
+    static int recursionSearch(int arr[], int start, int last, int x)
+    {
+         if (last < start)
+            return -1;
+         if (arr[start] == x)
+            return start;
+        if(arr[last]>x)
+            return last;
+        if(arr[0]<x)
+          return start+1;
+         return recursionSearch(arr, start+1, last, x);
     }
     // -----------------------------
     private static final Scanner scanner = new Scanner(System.in);
