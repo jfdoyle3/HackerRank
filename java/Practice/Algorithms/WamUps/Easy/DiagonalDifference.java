@@ -11,55 +11,37 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
-
-    /*
-     * Complete the 'diagonalDifference' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
-     */
-
     public static int diagonalDifference(List<List<Integer>> arr) {         
         int row=arr.size()-1;
-        
-        // System.out.println(arr.size());
         int topLeftNumber=arr.get(0).get(0);
         int middleNumber=arr.get(1).get(1);
         int topRightNumber=arr.get(0).get(row);
         int bottomRightNumber=arr.get(row).get(row);
         int bottomLeftNumber=arr.get(row).get(0);
-       // System.out.println("Tleft: "+topLeftNumber);
-       // System.out.println("Tright: "+topRightNumber);
-       // System.out.println("middle: "+middleNumber);
-      //  System.out.println("Tright: "+bottomRightNumber);
         int diag1=topLeftNumber+middleNumber+bottomRightNumber;
         int diag2=topRightNumber+middleNumber+bottomLeftNumber;
         int avg=diag2-diag1;
         int average, diagA, diagB;
          average=diagA=diagB=0;
 
-
            for(int idx1=0, idx2=0;  idx2<arr.get(row).size(); idx1++,idx2++){
               int number=arr.get(idx1).get(idx2);
-           //   System.out.println("d: "+diagA+" | n: "+number);
               diagA+=number;
            }
-          //   System.out.println(diagA);
-             
-             for(int idx1=0, idx2=row;  idx2<=arr.get(row).size(); idx1++,idx2--){
-           //  System.out.println(idx1+","+idx2);
+            
+            for(int idx1=0, idx2=row;  idx2<=arr.get(row).size(); idx1++,idx2--){
               int number=arr.get(idx1).get(idx2);
-           //   System.out.println("d: "+diagB+" | n: "+number);
-              diagB+=number;
-              if (idx2==0){
+               diagB+=number;
+               if (idx2==0){
                   break;
-              }
+              } 
             }
-   // System.out.println(diagB);
-            average=diagB-diagA;
-        
 
-
+            if (diagB > diagA){
+              average=diagB-diagA; 
+            } else {
+              average=diagA-diagB;
+            }
 
         return average;
     }
