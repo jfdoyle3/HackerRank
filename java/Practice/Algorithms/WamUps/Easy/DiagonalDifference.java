@@ -13,14 +13,6 @@ import static java.util.stream.Collectors.toList;
 class Result {
     public static int diagonalDifference(List<List<Integer>> arr) {         
         int row=arr.size()-1;
-        int topLeftNumber=arr.get(0).get(0);
-        int middleNumber=arr.get(1).get(1);
-        int topRightNumber=arr.get(0).get(row);
-        int bottomRightNumber=arr.get(row).get(row);
-        int bottomLeftNumber=arr.get(row).get(0);
-        int diag1=topLeftNumber+middleNumber+bottomRightNumber;
-        int diag2=topRightNumber+middleNumber+bottomLeftNumber;
-        int avg=diag2-diag1;
         int average, diagA, diagB;
          average=diagA=diagB=0;
 

@@ -11,16 +11,18 @@ public class Solution {
     // Complete the staircase function below.
     static void staircase(int n) {
         StringBuilder sb=new StringBuilder();
-        for (int rows=0; rows>n; rows--){
-            // System.out.print(rows+1);
-             int row=rows-1;
-           // for (int idx=0; idx<row; idx++){
-                sb.append("#"); 
-                System.out.print(sb);
-              
+        for (int rows=0, cols= rows<n; rows++){
+             System.out.print(rows+1);
+           // int row=rows-1;
+        // spaces
+        // do{
+        //   //  for (int idx=0; idx<row; idx++){
+        //         sb.append("#"); 
+        //         System.out.print(sb);
+        // }while();
         //}
        
-        System.out.println();
+     //   System.out.println();
      }
      
     }
