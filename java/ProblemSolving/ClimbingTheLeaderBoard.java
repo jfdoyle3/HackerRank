@@ -8,7 +8,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    // Complete the climbingLeaderboard function below.
+
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
         int[] staticResult={-1000000};
         int[] result=new int[alice.length];
