@@ -10,34 +10,22 @@ public class Solution {
 
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
-     byte bribeCounter=0;
-        byte position=0;
-
-        for (int person=0; person<q.length-1; person++){
-
-       // System.out.println(q[person]);
-        if (q[person]>q[person+1]){
-
-            bribeCounter++;
-        }
-            System.out.println("b: "+bribeCounter+"| idx: "+person+"| person "+q[person]);
-            if (bribeCounter>2){
-                System.out.println("Too chaotic");
-                return;
+        findIndex(q,1);
+        int[] sorted=q;
+        Arrays.sort(sorted);
+        int element=1;
+        int index=-1;
+       for(int i = 0; i < q.length; i++) {
+            if(q[i] == element) {
+                index = i;
+                break;
             }
         }
-
+         System.out.println("Index of "+element+" is : "+index);
     }
-   static void Sort(byte first, byte second){
-    if( first>second){
-    
+    static void findIndex(int[] array,int element){
+        System.out.println("Find Index");
     }
-
-       
-   }
-
-
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
