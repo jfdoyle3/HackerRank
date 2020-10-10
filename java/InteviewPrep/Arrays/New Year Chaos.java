@@ -10,21 +10,25 @@ public class Solution {
 
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
-        findIndex(q,1);
+        System.out.println("fi: "+findIndex(q,1));
         int[] sorted=q;
         Arrays.sort(sorted);
-        int element=1;
-        int index=-1;
-       for(int i = 0; i < q.length; i++) {
-            if(q[i] == element) {
-                index = i;
+        System.out.println(findIndex(sorted,1));
+
+        
+
+      
+    }
+    static int findIndex(int[] array,int element){
+        System.out.println("Find Index");
+          int arrayIndex=-1;
+       for(int idx = 0; idx < array.length; idx++) {
+            if(array[idx] == element) {
+                arrayIndex = idx;
                 break;
             }
         }
-         System.out.println("Index of "+element+" is : "+index);
-    }
-    static void findIndex(int[] array,int element){
-        System.out.println("Find Index");
+        return arrayIndex;
     }
     private static final Scanner scanner = new Scanner(System.in);
 
