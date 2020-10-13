@@ -10,31 +10,34 @@ public class Solution {
 
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
-        sort(q);
-        for (int w : q){
-        System.out.print(w+" ");
-        }
+        int bribeCounter=sort(q,0);
+        System.out.printf("\nB: %d",bribeCounter);
     }
    
-    static void sort(int arr[]) 
-    { 
-        int n = arr.length; 
-  
+    static int sort(int arr[], int bribeCounter) { 
+        int n = arr.length;
         // One by one move boundary of unsorted subarray 
         for (int i = 0; i < n-1; i++) 
         { 
             // Find the minimum element in unsorted array 
             int min_idx = i; 
-            for (int j = i+1; j < n; j++) 
-                if (arr[j] < arr[min_idx]) 
+            for (int j = i+1; j < n; j++) {
+                if (arr[j] < arr[min_idx]) {
                     min_idx = j; 
-  
+                    System.out.printf("min: %d \n",min_idx);
+                }
+                
+            }
             // Swap the found minimum element with the first 
             // element 
+            
             int temp = arr[min_idx]; 
             arr[min_idx] = arr[i]; 
-            arr[i] = temp; 
+            arr[i] = temp;
+            bribeCounter++;
+            System.out.printf("array: %d ",arr[min_idx]);
         } 
+        return bribeCounter;
     } 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -57,7 +60,7 @@ public class Solution {
             }
             
             minimumBribes(q);
-            System.out.println(">>>-------> Test Case <-----------<<<");
+            System.out.println("       >>>-------> Test Case <-----------<<<");
         }
 
         scanner.close();
