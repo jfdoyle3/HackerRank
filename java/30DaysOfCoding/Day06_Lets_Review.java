@@ -2,32 +2,32 @@ import java.io.*;
 import java.util.*;
 
 public class Solution {
-
+ private static final Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner input=new Scanner();
-         int N = Integer.parseInt(input.nextInt());
-
-            for (var index = 0; index < N; index++)
-
+        
+         int n = input.nextInt();
+         
+            for (int index = 0; index < n; index++)
             {
                 
-                word = input.nextLine();
-
-                for (int even = 0; even < word.Length; even++)
+               String  word = input.next();
+               String[]  wordArr=word.split("");
+                for (int even = 0; even < wordArr.length; even++)
                 {
                     if (even % 2 == 0)
-                        System.out.print(word[even]);
+                        System.out.print(wordArr[even]);
                 }
 
                 System.out.print(" ");
 
-                for (int odd = 0; odd < word.Length; odd++)
+                for (int odd = 0; odd < wordArr.length; odd++)
                 {
                     if (odd % 2 != 0)
-                        System.out.print(word[odd]);
+                        System.out.print(wordArr[odd]);
                 }
 
                 System.out.println();
+        }
     }
 }

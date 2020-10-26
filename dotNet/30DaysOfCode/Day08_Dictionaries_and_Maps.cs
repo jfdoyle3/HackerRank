@@ -21,8 +21,7 @@ namespace HackerRank
                 phoneNumbers.Add(keyValue[0], keyValue[1]);
             }
 
-            //foreach (KeyValuePair<String,String> item in phoneNumbers)
-            //    Console.WriteLine("Key:{0} = Value: {1}",item.Key,item.Value);
+
             for (int queries = 0; queries < n; queries++)
             {
                 string query = Console.ReadLine();
