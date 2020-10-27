@@ -15,12 +15,14 @@ class Solution
     public static Node removeDuplicates(Node head) {
       //Write your code here
       Node current=head;
+      Node temp=current;
       while (current !=null){
-        if (current==head.next){
+        if (current==temp){
             current.next=current.next.next;
-            return head;
+         
       }
         current=current.next;
+        temp=head.next;
       }
       return head;
     }
