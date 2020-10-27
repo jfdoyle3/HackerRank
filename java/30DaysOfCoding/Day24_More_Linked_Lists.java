@@ -14,8 +14,15 @@ class Solution
 
     public static Node removeDuplicates(Node head) {
       //Write your code here
- 
-
+      Node current=head;
+      while (current !=null){
+        if (current==head.next){
+            current.next=current.next.next;
+            return head;
+      }
+        current=current.next;
+      }
+      return head;
     }
 
 	 public static  Node insert(Node head,int data)
