@@ -7,19 +7,17 @@ class Node{
         data=d;
         next=null;
     }
-	
 }
 class Solution
 {
 
     public static Node removeDuplicates(Node head) {
-      //Write your code here
+     
       Node current=head;
       Node temp=current;
       while (current !=null){
         if (current==temp){
             current.next=current.next.next;
-         
       }
         current=current.next;
         temp=head.next;
