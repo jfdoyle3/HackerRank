@@ -12,14 +12,13 @@ public class Solution {
     static void countSwaps(int[] a) {
         int arrLen = a.length; 
         int swapCount=0;
-        int temp = 0;  
+        int numberBeingSwapped = 0;  
          for(int idx=0; idx < arrLen; idx++){  
                  for(int idx2=1; idx2 < (arrLen-idx); idx2++){  
                           if(a[idx2-1] > a[idx2]){  
-                            
-                                 temp = a[idx2-1];  
+                                  numberBeingSwapped= a[idx2-1];  
                                  a[idx2-1] = a[idx2];  
-                                 a[idx2] = temp;  
+                                 a[idx2] = numberBeingSwapped;  
                                  swapCount++;
                          }  
                           
