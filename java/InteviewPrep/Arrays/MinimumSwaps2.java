@@ -8,51 +8,27 @@ import java.util.regex.*;
 
 public class Solution {
 
-
-
-
-
-
-
-    
+    // Complete the minimumSwaps function below.
     static int minimumSwaps(int[] arr) {
-        int arrLen = arr.length; 
-        int swapCount=0;
-       
-        for (int idx = 0; idx < arrLen-1; idx++) 
-        { 
-            int min_idx = idx; 
-            for (int idx2 = idx+1; idx2 < arrLen; idx2++) 
-                if (arr[idx2] < arr[min_idx]) 
-                    min_idx = idx2; 
-                  
-            int temp = arr[min_idx]; 
-            arr[min_idx] = arr[idx]; 
-            arr[idx] = temp; 
-            swapCount++;
-            
-            
-            boolean sorted=isSorted(arr);
-            if (sorted){
-                break;
-            }
-            System.out.print("SC: "+swapCount+"--> ");
-            for(int ele : arr)
-                System.out.print(ele+" ");
-                
-            System.out.println();
-        }
-        
-        
-        return swapCount;
+
+    int i = 0, j = 0,
+        len = arr.length,
+        swapCount = 0;
+    while (i < len) {
+        j = arr[i] - 1;
+        if (i != j)
+            swapCount += swap(i, j, arr);
+        else
+            i++;
     }
-    public static boolean isSorted(int[] data){
-    for(int idx = 1; idx < data.length; idx++){
-        if(data[idx-1] > data[idx]){
-            return false;
-        }
-    }
-    return true;
+    return swapCount;
+}
+    static int swap(int a, int b, int[] arr) {
+    System.out.println("swap (" + a + "," + b + ")");
+    int item = arr[a];
+    arr[a] = arr[b];
+    arr[b] = item;
+    return 1;
 }
 
     private static final Scanner scanner = new Scanner(System.in);
