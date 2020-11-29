@@ -17,35 +17,30 @@ public class Solution {
 
     static class TestDataEmptyArray {
         public static int[] get_array() {
-          int[] arrInt={};
-          return arrInt;
+            int[] arr={};
+            return arr;
         }
     }
 
     static class TestDataUniqueValues {
         public static int[] get_array() {
-             int[] arrInt={1,2,3,4};
-            return arrInt;
+            int[] arr={4,7,5,1};
+            return arr;
         }
 
         public static int get_expected_result() {
-            // complete this function
-            int[] arrInt={1,2,3};
-            return 1;
+            return 3;
         }
     }
 
     static class TestDataExactlyTwoDifferentMinimums {
         public static int[] get_array() {
-            // complete this function
-            int[] arrInt={1,1,2};
-            return arrInt;
+            int[] arr={1,1,3};
+            return arr;
         }
 
         public static int get_expected_result() {
-            // complete this function
-            int[] arrInt={1,2,3};
-            return arrInt[0];
+            return 0;
         }
     }
 
