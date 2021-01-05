@@ -40,15 +40,15 @@ public class Solution {
         List<Integer> getHighestKey=new ArrayList<Integer>();
         if(hm.size()>1)
             hm.remove(0);
-    //    for (Integer value : hm.values())
-    //    System.out.println("v: "+value);
+       for (Integer value : hm.values())
+       System.out.println("v: "+value);
         for (Map.Entry<Integer,Integer> entry : hm.entrySet()){
                 if(entry.getValue()==Collections.max(hm.values()))
                   getHighestKey.add(entry.getKey()); 
         }
          Collections.sort(getHighestKey);
                   Collections.reverse(getHighestKey);
-              //    System.out.println("highest: "+getHighestKey.get(0));
+                  System.out.println("highest: "+getHighestKey.get(0));
             return getHighestKey.get(0);
     }
 
