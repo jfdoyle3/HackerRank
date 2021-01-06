@@ -7,22 +7,27 @@ class Node{
         data=d;
         next=null;
     }
+	
 }
 class Solution
 {
 
     public static Node removeDuplicates(Node head) {
-     
+         
       Node current=head;
       Node temp=current;
+      
+      Node index=null;
       while (current !=null){
-        if (current==temp){
+        if (current.data==temp.data){
             current.next=current.next.next;
-      }
+      } 
+      
         current=current.next;
-        temp=head.next;
+        temp=head.next.next;
       }
       return head;
+
     }
 
 	 public static  Node insert(Node head,int data)
