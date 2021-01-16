@@ -36,7 +36,7 @@ public class Solution {
     }
     
     static int findHighestNumber(HashMap<Integer,Integer> hm){
-       
+       // refactor this
         List<Integer> getHighestKey=new ArrayList<Integer>();
         if(hm.size()>1)
             hm.remove(0);
