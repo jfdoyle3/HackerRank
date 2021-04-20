@@ -65,7 +65,13 @@ public class Solution {
      */
     static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
     
-    // make brand new linked list
+    SinglyLinkedList mergedList=new SinglyLinkedList();
+    Node currentA=head1;
+    Node currentB=head2;
+    
+    
+    
+    // make brand new linked list  - done
     // initalize var currentA node= root head1;
     // initalize var currentB node = root head2;
     // while loop thru currentA !=null && currentB !=null
