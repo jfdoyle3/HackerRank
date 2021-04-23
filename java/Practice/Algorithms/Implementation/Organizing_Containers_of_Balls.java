@@ -10,8 +10,26 @@ public class Solution {
 
     // Complete the organizingContainers function below.
     static String organizingContainers(int[][] container) {
-
-
+        System.out.println("Length of container: "+container.length);
+        int testCases=container.length;
+        
+        String result="impossible";
+        HashMap<Integer,Integer> bins=new HashMap<>();
+        List <Integer> rows=new ArrayList<>();
+        List <Integer> columns=new ArrayList<>();
+        int rowTotal=0;
+        int rowLen=container[0].length;
+        int colLen=container.length;
+        
+        for(int col=0; col<colLen; col++){
+        for(int row=0; row<rowLen; row++){
+          //   rowTotal=rowTotal+container[1][idx];
+              System.out.printf("%d ",container[col][row]); 
+      //  rows.add(rowTotal);
+        
+        }
+        }
+        return result;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
