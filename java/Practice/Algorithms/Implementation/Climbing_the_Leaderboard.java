@@ -23,9 +23,20 @@ class Result {
 
     public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
     
+        List<Integer> results=new ArrayList<>();
+        results.add(1);
+        
+        Collections.reverse(ranked);
+       // int rankSize=ranked.size();
+       // int idx=rankSize-1;
+        
+   
+            System.out.println(ranked);
+            
 
+        return results;
     }
-
+    
 }
 
 public class Solution {
