@@ -12,10 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
-        List<Integer> fakeReturn=new ArrayList<>();
-        fakeReturn.add(1);
-        
+    public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {        
         List<Integer> results=new ArrayList<>();
         List<Integer> newBoard=new ArrayList<>();
         
@@ -23,54 +20,41 @@ class Result {
             if (!newBoard.contains(score))
                 newBoard.add(score);
         }
+                int ranking=1;
         
-        // Collections.reverse(player);
-        // int rankIdx=1;
-        // int newIdx=0;
-        // int playerIdx=0;
+        HashMap<Integer,Integer> hashBoard=new HashMap<>();
         
-      //  do{
-      //     System.out.printf("rIdx: %d | ps: %d | nB: %d  \n",rankIdx,player.get(3),newBoard.get(4));
-        //    if(player.get(3)<=newBoard.get(rankIdx-1)){
-        //        rankIdx++;
-        //        results.add(rankIdx);
-        //    }
-    //    System.out.println(newBoard);    
-    //    System.out.println("\n\n\n\nRanks:\n"+results);
-       hashList(newBoard,player.get(0));
-        return fakeReturn;
-    }
-   public static void hashList(List<Integer> list, int score) {
-        
-        int ranking=1;
-        
-        HashMap<Integer,Integer> board=new HashMap<>();
-        
-        for(int idx=0; idx<list.size(); idx++) {
-            if(board.containsKey(list.get(idx))){
-                board.put(ranking++,list.get(idx));
+        for(int idx=0; idx<newBoard.size(); idx++) {
+            if(hashBoard.containsKey(newBoard.get(idx))){
+                hashBoard.put(ranking++,newBoard.get(idx));
             } else{
-                board.put(ranking++,list.get(idx));
+                hashBoard.put(ranking++,newBoard.get(idx));
             }
         }
+        for(int score : player){
+            int rank=getRanking(hashBoard,score);
+            results.add(rank);
+        }
+            
+        return results;
+    }
+   public static int getRanking(HashMap<Integer,Integer> board, int playerScore) {
         
         int ranked=0;
         
-        for (Map.Entry<Integer, Integer> e : board.entrySet()) {
-            Integer key = e.getKey();
-            Integer value = e.getValue();
-         //   System.out.println(key+" | "+value);
+        for (Map.Entry<Integer, Integer> data : board.entrySet()) {
+            Integer position = data.getKey();
+            Integer score = data.getValue();
            
-            if (value<=score) { 
-                //System.out.printf("s: %d   v: %d\n",score,value);
-                ranked=key;
+            if (score<=playerScore) { 
+                ranked=position;
                 break;
             }
         }
         if (ranked==0) {
             ranked=board.size()+1;
         }
-        System.out.printf("r: %d     s: %d",ranked,score);
+        return ranked;
     }
 }
 
