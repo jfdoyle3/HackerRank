@@ -20,7 +20,7 @@ class Result {
      */
 
     public static String organizingContainers(List<List<Integer>> container) {
-        String result="";
+        String result="Possible";
         
         List<Integer> bins=new ArrayList<>();
         List<Integer> balls=new ArrayList<>();
@@ -47,19 +47,14 @@ class Result {
             rowLen--;
         }while(rowLen>0);
         
-    
         Collections.sort(balls);
         Collections.sort(bins);
         
-        if(bins.equals(balls)){
-            result="Possible";
-        } else {
+        if(!bins.equals(balls))
             result="Impossible";
-        }
-  
+        
         return result;
     }
-
 }
 
 public class Solution {
