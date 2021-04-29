@@ -12,6 +12,13 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
+    /*
+     * Complete the 'organizingContainers' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts 2D_INTEGER_ARRAY container as parameter.
+     */
+
     public static String organizingContainers(List<List<Integer>> container) {
         String result="";
         
@@ -35,17 +42,21 @@ class Result {
             for(int col=0; col<container.size(); col++)
                 colTotal+=container.get(col).get(rowLen-1);
         
-        balls.add(colTotal);
-        colTotal=0;
-        rowLen--;
+            balls.add(colTotal);
+            colTotal=0;
+            rowLen--;
         }while(rowLen>0);
+        
+    
+        Collections.sort(balls);
+        Collections.sort(bins);
         
         if(bins.equals(balls)){
             result="Possible";
         } else {
             result="Impossible";
         }
-        
+  
         return result;
     }
 
