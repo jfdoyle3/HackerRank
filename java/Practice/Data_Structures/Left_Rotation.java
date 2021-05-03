@@ -22,9 +22,23 @@ class Result {
      */
 
     public static List<Integer> rotateLeft(int d, List<Integer> arr) {
-        List<Integer> results=new ArrayList<>();
-        results.add(1);
+        List<Integer> fakeResults=new ArrayList<>();
+        fakeResults.add(1);
+        int position=arr.size()-d;
+        System.out.println(position);
+        System.out.println(arr);
+        
+        List  results=new ArrayList<>(d-1);
+    //   results.set(0, arr.get(4));
+    //   results.set(1,arr.get(0));
+    //   results.set(2,arr.get(1));
+    //   results.set(3,arr.get(2));
+    //   results.set(4,arr.get(3));
+        
+        
+    
 
+        
         return results;
     }
 
