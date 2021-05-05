@@ -11,30 +11,19 @@ public class Solution {
     // Complete the matchingStrings function below.
     static int[] matchingStrings(String[] strings, String[] queries) {
         
-        int stringsLen=strings.length;
-        int queryLen=queries.length;
-        int[] results=new int[queryLen];
-        int queryIdx=0;
+        int[] results = new int[queries.length];
         
-        do{  
-        int matchCount=0;    
-        for (int idx=0; idx<stringsLen; idx++){
-            boolean match=matches(strings[idx],queries[queryIdx]);
-            if(match){
-                matchCount++;             
-            } 
+        for(int query = 0; query < queries.length; query++){
+            int result = 0;
+            for(int input = 0; input < strings.length; input++){
+                if(strings[input].equals(queries[query])) {
+                    result++;
+                }
+            }
+            results[query] = result;
         }
-        results[queryIdx]=matchCount;
-        queryIdx++;
-        }while(queryIdx<queryLen);    
+        
         return results;
-    }
-    
-    static boolean matches(String patternA, String patternB){
-        Pattern pattern=Pattern.compile(patternA, Pattern.CASE_INSENSITIVE);
-        Matcher matcher=pattern.matcher(patternB);
-        boolean matchFound=matcher.find();
-        return matchFound;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
