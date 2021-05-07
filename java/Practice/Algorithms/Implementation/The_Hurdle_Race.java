@@ -26,6 +26,7 @@ class Result {
         int potions=Collections.max(height)-k;
         if(potions<0)
             potions=0;
+		
         return potions;
     }
 
