@@ -12,6 +12,14 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
+    /*
+     * Complete the 'superDigit' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. STRING n
+     *  2. INTEGER k
+     */
     
     public static int superDigit(String numbers, int length) {
         
@@ -20,15 +28,16 @@ class Result {
         String[] splitUp=numbers.split("");
         int strLen=numbers.length();
                 
-        for(int total=0; total<length; total++){
+
             for (int idx=0; idx<strLen; idx++)
                 sum+=Integer.parseInt(splitUp[idx]);
-        }
-    
-        String strNums=String.valueOf(sum);
+        
+         totalSum=sum*length;
+         
+        String strNums=String.valueOf(totalSum);
         
         if(strNums.length()>1)
-           superDigit(strNums,strNums.length());
+         return  superDigit(strNums,1);
     
         int results=Integer.parseInt(strNums);
         return results;
