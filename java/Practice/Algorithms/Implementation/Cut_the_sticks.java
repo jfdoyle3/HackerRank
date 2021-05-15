@@ -12,12 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'cutTheSticks' function below.
-     *
-     * The function is expected to return an INTEGER_ARRAY.
-     * The function accepts INTEGER_ARRAY arr as parameter.
-     */
+
 
     public static List<Integer> cutTheSticks(List<Integer> arr) {
     
@@ -28,7 +23,7 @@ class Result {
 
     List<Integer> results=new ArrayList<>();
     
-     // Starting Recursion
+
     int sum=0;
     int minNumber=0;
     int arrLen=arr.size();
