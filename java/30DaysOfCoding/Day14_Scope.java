@@ -15,11 +15,11 @@ class Difference {
                this.elements = elements;
            }
 
-           public int computeDifference(){
+           public void computeDifference(){
               int min = Arrays.stream(elements).min().getAsInt();
               int max = Arrays.stream(elements).max().getAsInt();
                maximumDifference = max - min;
-               return maximumDifference;
+               
            }
 } // End of Difference class
 
