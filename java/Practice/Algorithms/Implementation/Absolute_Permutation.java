@@ -28,6 +28,8 @@ class Result {
     for(int idx=1; idx<n; idx++){
         int firstNum=i+k;
         int secondNum=i-k;
+		if(firstNum>secondNum)
+			results.add(firstNum);
         
     }
     results.add(-1);
