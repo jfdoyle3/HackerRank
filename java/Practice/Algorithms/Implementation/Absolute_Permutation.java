@@ -26,16 +26,22 @@ class Result {
     List<Integer> results=new ArrayList<>();
     
     for(int idx=1; idx<n; idx++){
-        int firstNum=i+k;
-        int secondNum=i-k;
-		if(firstNum>secondNum)
-			results.add(firstNum);
+        int firstNum=idx+k;
+        int secondNum=idx-k;
+        
+        results.add(firstNum);
+      //  findNumber();
+        System.out.printf("f: %d    s: %d\n",firstNum,secondNum);
+        
         
     }
-    results.add(-1);
+   // results.add(-1);
     
     
     return results;
+    }
+    public static void findNumber(){
+        System.out.println("BOO!");
     }
 
 }
@@ -46,7 +52,7 @@ public class Solution {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int t = Integer.parseInt(bufferedReader.readLine().trim());
-
+            
         IntStream.range(0, t).forEach(tItr -> {
             try {
                 String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
