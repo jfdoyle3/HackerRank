@@ -22,23 +22,48 @@ class Result {
      */
 
     public static List<Integer> absolutePermutation(int n, int k) {
+        
+    int num=0;
     // Write your code here
     List<Integer> results=new ArrayList<>();
     
-    for(int idx=1; idx<n; idx++){
-        int firstNum=idx+k;
-        int secondNum=idx-k;
-        
-        results.add(firstNum);
-      //  findNumber();
-        System.out.printf("f: %d    s: %d\n",firstNum,secondNum);
-        
-        
+    if(k==0){
+        for(int idx=1; idx<=n; idx++)
+            results.add(idx);
+            
+        return results;
     }
-   // results.add(-1);
     
+    if ((n/k)%2!=0){
+        results.add(-1);
+        return results;
+    }
+        
     
+    for(int idx=1; idx<=n; idx++){
+      
+         // flip addition to subtraction based on k
+                            // k=5 , flip addition to subaction  every 5 times.
+                            // k=25, flip addition to subtraction every 25 times.
+                            
+        
+        // if(idx==k*idx){
+        //     num=idx+k;
+        //     results.add(num);
+        // }
+        // else {
+        //     num=Math.abs(idx-k);
+        //     results.add(num);
+        // }
+        
+      //  findNumber();
+      //  System.out.printf("f: %d    s: %d\n",firstNum,secondNum);
+        System.out.println(k*idx);  
+    }
+ 
+    System.out.println();
     return results;
+    
     }
     public static void findNumber(){
         System.out.println("BOO!");
