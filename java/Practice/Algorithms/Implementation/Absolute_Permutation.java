@@ -23,51 +23,56 @@ class Result {
 
     public static List<Integer> absolutePermutation(int n, int k) {
         
-    int num=0;
-    // Write your code here
+    int countToK=1;
+    int numCount=1;
     List<Integer> results=new ArrayList<>();
     
+    // Return List from 1 to N if K=0;
     if(k==0){
         for(int idx=1; idx<=n; idx++)
             results.add(idx);
             
         return results;
     }
-    
+    // Return -1 if N/K is not an even number
     if ((n/k)%2!=0){
         results.add(-1);
         return results;
     }
         
-    
+    int numTimes=n/k;
+    boolean flip=true;
+    System.out.println("numT: "+numTimes);
     for(int idx=1; idx<=n; idx++){
       
-         // flip addition to subtraction based on k
-                            // k=5 , flip addition to subaction  every 5 times.
-                            // k=25, flip addition to subtraction every 25 times.
-                            
+        // flip addition to subtraction based on k
+        // k=5 , flip addition to subtraction every 5 times.
+        // k=25, flip addition to subtraction every 25 times.
+        if(numCount>k){
+            numCount=1;
+            flip=!flip;
+        }                    
         
-        // if(idx==k*idx){
-        //     num=idx+k;
-        //     results.add(num);
-        // }
-        // else {
-        //     num=Math.abs(idx-k);
-        //     results.add(num);
-        // }
+        if(flip){
+            results.add(idx+k);
+            numCount++;
+            
+        }
+        else {
+            results.add(Math.abs(idx-k));
+            numCount++;
+        }
         
-      //  findNumber();
+  
       //  System.out.printf("f: %d    s: %d\n",firstNum,secondNum);
-        System.out.println(k*idx);  
+        System.out.printf("idx: %d   mod: %d\n",idx,(k*idx)/2);  
     }
  
     System.out.println();
     return results;
     
     }
-    public static void findNumber(){
-        System.out.println("BOO!");
-    }
+
 
 }
 
