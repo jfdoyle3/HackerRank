@@ -24,8 +24,19 @@ class Result {
 
     public static List<Long> bonetrousle(long n, long k, int b) {
         
-    
-    return null;
+        List<Long> results=new ArrayList<>();
+        long total=0;
+        for(long num=1; num<=k; num++)
+            total+=num;
+            
+        if(k<n && b<=k){
+            long fail=-1;
+            results.add(fail);
+            return results;            
+        }
+             
+        results.add(total);
+    return results;
 
     }
 
