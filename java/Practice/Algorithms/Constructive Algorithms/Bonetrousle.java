@@ -21,37 +21,55 @@ class Result {
      *  2. LONG_INTEGER k
      *  3. INTEGER b
      */
-	 
-	// Make a list/collection with default values (1 - b)
-    // Add the numbers in collection
-    // If its greater than N return -1
-    // If its equal to N return collection
-    // If its less than  N 
+
+   
+    
+
+    
+    // If collection sum is less than  N 
     // Calculate difference from N - sum of array
     // Add the difference to last element of collection
     // Check if new number is less than or equal to K
     // return new collection 
     // If not greater than K set element to K and K - 1
     // Repeat with next element
-    // If I run out of elements return -1
-	
+    // If I run out of elements return
+    
     public static List<Long> bonetrousle(long n, long k, int b) {
         
-
+        // Make a list/collection with default values (1 - b)
         List<Long> results=new ArrayList<>();
         long total=0;
-        for(long num=1; num<=k; num++)
-            total+=num;
-            
+        
+        // If collection sum is greater than N return -1
         if(k<n && b<=k){
             long fail=-1;
             results.add(fail);
-            return results;            
+            return results;
         }
-             
-        results.add(total);
+        for(long num=1; num<=b; num++){
+        // Add the numbers in collection
+            results.add(num);
+        }
+        // If collection sum is equal to N return collection
+        
+        long sum=results.stream().collect(Collectors.summingLong(Long::longValue));
+        long sum2=results.stream().mapToLong(Long::longValue).sum();
+        long sum3=sum(results);
+        System.out.println(sum3);
+        
+
+
     return results;
 
+    }
+    
+    public static long sum(List<Long> numbers){
+        long total=0;
+        for(Long num : numbers)
+             total+=num;
+        
+        return total;
     }
 
 }
