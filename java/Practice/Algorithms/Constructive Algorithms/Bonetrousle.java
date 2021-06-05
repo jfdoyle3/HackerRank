@@ -63,6 +63,13 @@ class Result {
     return results;
 
     }
+    public static void cycleThruList(List<Long> list){
+       // may not need both variables.
+        int len=list.size();
+        int idx=1;  
+        list.set(len-idx,10); //change 10 to max K
+        
+    }
     
     public static long sum(List<Long> numbers){
         long total=0;
