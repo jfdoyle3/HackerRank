@@ -39,16 +39,18 @@ class Result {
             results.add(num);
         }
         // If collection sum is less than  N 
-    //    while (sum(results)<n){
-        // If collection sum is equal to N return collection
+        while (sum(results)<n){
+       //  If collection sum is equal to N return collection
             if(sum(results)==n)
                 return results;
         
-        if (k>n)
-            results.set(b-1,k-1);
-        else
-            results.set(b-1,k);
-                
+            if (k>n && b>1)
+                results.set(b-1,k-2);
+            else
+                results.set(b-1,k);
+            
+            
+            
             
          // Calculate difference from N - sum of array    
          //   results.set(,k);
@@ -63,7 +65,7 @@ class Result {
     // If I run out of elements return -1
         
 
-    //    }
+    }
     // long fail=-1;
     // results.add(fail);
      return results;
@@ -77,7 +79,7 @@ class Result {
         
       //  return list;
         
-   // }
+ //  }
     
     public static long sum(List<Long> numbers){
         // long total=0;
