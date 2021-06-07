@@ -22,61 +22,70 @@ class Result {
      *  3. INTEGER b
      */
 
-   
-    
-
-    
-    // If collection sum is less than  N 
-    // Calculate difference from N - sum of array
-    // Add the difference to last element of collection
-    // Check if new number is less than or equal to K
-    // return new collection 
-    // If not greater than K set element to K and K - 1
-    // Repeat with next element
-    // If I run out of elements return
-    
     public static List<Long> bonetrousle(long n, long k, int b) {
         
         // Make a list/collection with default values (1 - b)
         List<Long> results=new ArrayList<>();
-        long total=0;
-        
+
         // If collection sum is greater than N return -1
         if(k<n && b<=k){
             long fail=-1;
             results.add(fail);
             return results;
         }
-        for(long num=1; num<=b; num++){
-        // Add the numbers in collection
+        
+         for(long num=1; num<=b; num++){
+          // Add the numbers to the collection
             results.add(num);
         }
+        // If collection sum is less than  N 
+    //    while (sum(results)<n){
         // If collection sum is equal to N return collection
+            if(sum(results)==n)
+                return results;
         
-        long sum=results.stream().collect(Collectors.summingLong(Long::longValue));
-        long sum2=results.stream().mapToLong(Long::longValue).sum();
-        long sum3=sum(results);
-        System.out.println(sum3);
+        if (k>n)
+            results.set(b-1,k-1);
+        else
+            results.set(b-1,k);
+                
+            
+         // Calculate difference from N - sum of array    
+         //   results.set(,k);
+    
+   
+    // Add the difference to last element of collection
+        
+    // Check if new number is less than or equal to K
+    // return new collection 
+    // If not greater than K set element to K and K - 1
+    // Repeat with next element
+    // If I run out of elements return -1
         
 
-
-    return results;
+    //    }
+    // long fail=-1;
+    // results.add(fail);
+     return results;
 
     }
-    public static void cycleThruList(List<Long> list){
-       // may not need both variables.
-        int len=list.size();
-        int idx=1;  
-        list.set(len-idx,10); //change 10 to max K
+    // public static List<Long> cycleThruList(List<Long> list, long num, int idx){
+    //    // may not need both variables.
+    // //    int len=list.size();
+    // //     int idx=1;  
+    //    return list.set(idx,num); //num max K first
         
-    }
+      //  return list;
+        
+   // }
     
     public static long sum(List<Long> numbers){
-        long total=0;
-        for(Long num : numbers)
-             total+=num;
-        
-        return total;
+        // long total=0;
+        // for(Long num : numbers)
+        //      total+=num;
+        // long sum=results.stream().collect(Collectors.summingLong(Long::longValue));
+        // long sum2=results.stream().mapToLong(Long::longValue).sum();
+        return numbers.stream().mapToLong(Long::longValue).sum();
     }
 
 }
