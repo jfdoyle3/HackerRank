@@ -12,7 +12,7 @@ class Solution{
 
 	public static int getHeight(Node root){
       //Write your code here
-       Node travLeft, travRight;
+        Node travLeft, travRight;
         int leftBranchCount, rightBranchCount, branchRunLeft, branchRunRight;
 
         branchRunLeft = branchRunRight = leftBranchCount = rightBranchCount = 0;
@@ -24,40 +24,32 @@ class Solution{
         if (travLeft.left == null && travRight.right == null)
             return 0;
 
-        do
-        {
-
-            if (travLeft.left != null)
-            {
+        do{
+            
+            if (travLeft.left != null){
                 travLeft = travLeft.left;
                 leftBranchCount++;
             }
-            else if (travLeft.right != null)
-            {
+            else if (travLeft.right != null){
                 travLeft = travLeft.right;
                 leftBranchCount++;
             }
 
-
-            if (travRight.right != null)
-            {
+            if (travRight.right != null){
                 travRight = travRight.right;
                 rightBranchCount++;
             }
-            else if (travRight.left != null)
-            {
+            else if (travRight.left != null){
                 travRight = travRight.left;
                 rightBranchCount++;
             }
 
-            if (travLeft.left == null && travLeft.right == null)
-            {
+            if (travLeft.left == null && travLeft.right == null){
                 results[0] = leftBranchCount;
                 branchRunLeft = 1;
             }
 
-            if (travRight.left == null && travRight.right == null)
-            {
+            if (travRight.left == null && travRight.right == null){
                 results[1] = rightBranchCount;
                 branchRunRight = 1;
             }
@@ -69,37 +61,8 @@ class Solution{
 
         if (results[0] > results[1])
             return results[0];
-        else
-            return results[1];
-    
+        
+        return results[1];
     }
 
     public static Node insert(Node root,int data){
-        if(root==null){
-            return new Node(data);
-        }
-        else{
-            Node cur;
-            if(data<=root.data){
-                cur=insert(root.left,data);
-                root.left=cur;
-            }
-            else{
-                cur=insert(root.right,data);
-                root.right=cur;
-            }
-            return root;
-        }
-    }
-	 public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        int T=sc.nextInt();
-        Node root=null;
-        while(T-->0){
-            int data=sc.nextInt();
-            root=insert(root,data);
-        }
-        int height=getHeight(root);
-        System.out.println(height);
-    }
-}
