@@ -9,20 +9,23 @@ class Node{
     }
 }
 class Solution{
- 
+	       
 static void levelOrder(Node root){
-      //Write your code here
-    Queue<Node> queue=new LinkedList<>();
-    queue.add(root);
-      while(!queue.isEmpty())
-        {
-            Node temp = queue.remove();
-            System.out.printf("%d ",temp.data);
-            if(temp.left!=null)
-                queue.add(temp.left);
-            if(temp.right!=null)
-                queue.add(temp.right);
-        }
+      
+		// create a node queue
+		Queue<Node> queue=new LinkedList<>();
+		queue.add(root);
+		while(!queue.isEmpty()){
+			Node node = queue.remove();
+			// if node print value
+			System.out.printf("%d ",node.data);
+			// if left node not null add child node to the queue
+			if(node.left!=null)
+				queue.add(node.left);
+			// if right node not null add child node to the queue
+			if(node.right!=null)
+				queue.add(node.right);
+		}
     }
 
 public static Node insert(Node root,int data){

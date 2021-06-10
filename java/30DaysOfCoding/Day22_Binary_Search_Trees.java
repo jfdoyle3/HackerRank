@@ -21,9 +21,6 @@ class Solution{
         boolean finished = false;
         int[] results = new int[2];
 
-        if (travLeft.left == null && travRight.right == null)
-            return 0;
-
         do{
             
             if (travLeft.left != null){
