@@ -21,27 +21,33 @@ class Result {
 
     public static int migratoryBirds(List<Integer> arr) {
 
+		// Create a HashMap
         HashMap<Integer,Integer> birdMap=new HashMap<>();
+		
+		// Fill HashMsp with keys 1 through 5 with 0
         for(int key=1; key<=5; key++){
             birdMap.put(key,0);
         }
-        
+		
+		// Fill HashMap with array values as counts to HashMap values
         for(int birdType : arr){
             if (birdMap.containsKey(birdType))
                 birdMap.put(birdType,birdMap.get(birdType)+1);
         }
         
-
+		// Initialize maxEntry to null
         Map.Entry<Integer, Integer> maxEntry = null;
 
+		// Loop/Iterate through HashMap
         for (Map.Entry<Integer, Integer> entry : birdMap.entrySet())
         {
+			// Compare HashMap values to determine which is the highest Value and assign to maxEntry
             if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
             {
                 maxEntry = entry;
             }
         }
-        
+        // Return the HashMap key with the highest Value
     return maxEntry.getKey();
     }
 
