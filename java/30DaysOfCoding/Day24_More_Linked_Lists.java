@@ -13,21 +13,25 @@ class Solution
 {
 
     public static Node removeDuplicates(Node head) {
-         
-      Node current=head;
-      Node temp=current;
-      
-      Node index=null;
-      while (current !=null){
-        if (current.data==temp.data){
-            current.next=current.next.next;
-      } 
-      
-        current=current.next;
-        temp=head.next.next;
-      }
-      return head;
-
+        if(head==null)
+            return head;
+            
+        Node trav1=head;
+        Node trav2=head.next;
+        
+        while(trav2!=null){
+            if(trav1.data !=trav2.data){
+                trav1.next=trav2;
+                trav1=trav2;
+                trav2=trav2.next;
+            }
+            else
+                trav2=trav2.next;
+            
+          
+        }
+        trav1.next=null;
+        return head;
     }
 
 	 public static  Node insert(Node head,int data)
