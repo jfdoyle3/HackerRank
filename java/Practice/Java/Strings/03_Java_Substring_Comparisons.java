@@ -19,15 +19,16 @@ public class Solution {
          //   System.out.println(x);
             arr[idx]=x;
         //     smallest=x;
-        //     if(smallest.compareTo(largest)>0)
-        //         largest=x;
-        //   // if(smallest.compareTo(largest)<0)
+        //     
        //    System.out.printf("%s = %d\n",x,smallest.compareTo(largest));
             
         }
       
         for(String word : arr)
-            System.out.println("l "+word);
+        //if(smallest.compareTo(largest)>0)
+        //         largest=x;
+        // if(smallest.compareTo(largest)<0)
+            System.out.println(word);
         
         // Complete the function
         // 'smallest' must be the lexicographically smallest substring of length 'k'
@@ -35,5 +36,3 @@ public class Solution {
         
         return smallest + "\n" + largest;
     }
-
-
