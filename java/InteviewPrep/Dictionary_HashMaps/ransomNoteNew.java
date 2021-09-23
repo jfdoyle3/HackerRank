@@ -21,15 +21,16 @@ class Result {
      */
 
     public static void checkMagazine(List<String> magazine, List<String> note) {
-  HashMap<String, Integer> words=new HashMap<String, Integer>();
+		
+		HashMap<String, Integer> words=new HashMap<String, Integer>();
         int wordCount=0;
         int noteLength=note.size();
+		
         for (String word : magazine){
-            if(words.containsKey(word)){
-                words.put(word,words.get(word)+1);
-            } else{
-                words.put(word,1);
-            }
+            if(!words.containsKey(word))
+                words.put(word,0);
+			
+            words.put(word,words.get(word)+1);        
         }
 
         for(String noteWord : note){       
@@ -42,7 +43,6 @@ class Result {
         }
 		
         System.out.print(wordCount==noteLength ? "Yes" : "No");
-
     }
 }
 
