@@ -12,46 +12,33 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
+    /*
+     * Complete the 'countingValleys' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER steps
+     *  2. STRING path
+     */
+
     public static int countingValleys(int steps, String path) {
-    String[] aPath=path.split("");
-    int seaLevel=0;
-    int height=0;
-    boolean valley=false;
-    int counter=0;
-    // start into valley -1 / down  // end +1 /up and out
-    // valley enter 2 units deep.
-    // climbs out 2 units high to sea level 0;
-    for (int idx=0; idx<steps; idx++){
-     if (aPath[idx].equals("D")){
-         height--;
-   //      System.out.println(aPath[idx]+" : "+height);
-     }
-     if (aPath[idx].equals("U")){
-         height++;
-  //       System.out.println(aPath[idx]+" : "+height);
-     }
-//      if (height==0){
-//          counter++;
-//     }
-     if (height < 0 && !valley){
-         valley=true;
-         counter ++;
-          System.out.println(aPath[idx]+" : "+height);
-         System.out.println("c: "+counter);
         
-     } else {
-         valley=false;
-     }
- System.out.println("valley: "+valley);
-    if (valley){
-        continue;
+        int hiker=0;
+        int valleys=0;
+        for (char chr : path.toCharArray()) {
+            if (chr == 'U') hiker++;
+            if (chr == 'D') hiker--;
+           
+            if(hiker == 0  && chr == 'U')
+                valleys++;
+ 
+        }
+        return valleys;
+
     }
-  //  System.out.println(valley+" : "+height);
-    }
- //  System.out.println("result: "+counter);
-    return counter-1;
-    } 
+
 }
+
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));

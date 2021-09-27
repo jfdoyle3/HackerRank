@@ -13,27 +13,30 @@ import static java.util.stream.Collectors.toList;
 class Result {
 
     /*
-     * Complete the 'jumpingOnClouds' function below.
+     * Complete the 'sockMerchant' function below.
      *
      * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY c as parameter.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER_ARRAY ar
      */
 
-    public static int jumpingOnClouds(List<Integer> c) {
-     int len = c.size();
-    int count = -1;
-
-    for (int i = 0; i < len;) {
-      if (i + 2 < len && c.get(i + 2) == 0) {
-        i = i + 2;
-      } else {
-        i++;
-      }
-
-      count++;
+    public static int sockMerchant(int n, List<Integer> ar) {
+        
+        Collections.sort(ar);
+        int count=0;
+        int len=ar.size()-1;
+        
+       for (int j = 0; j < n-1; j++) 
+       {
+           if (ar.get(j)==ar.get(j+1))
+           {
+              count++;
+              j++;
+           } 
+       }
+         return count;
     }
-    return count;
-  }
 
 }
 
@@ -44,11 +47,11 @@ public class Solution {
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<Integer> c = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+        List<Integer> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
             .map(Integer::parseInt)
             .collect(toList());
 
-        int result = Result.jumpingOnClouds(c);
+        int result = Result.sockMerchant(n, ar);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
