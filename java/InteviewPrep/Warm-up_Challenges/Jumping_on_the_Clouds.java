@@ -12,22 +12,16 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'jumpingOnClouds' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY c as parameter.
-     */
 
-    public static int jumpingOnClouds(List<Integer> c) {
-     int len = c.size();
+    public static int jumpingOnClouds(List<Integer> clouds) {
+    int len = clouds.size();
     int count = -1;
 
-    for (int i = 0; i < len;) {
-      if (i + 2 < len && c.get(i + 2) == 0) {
-        i = i + 2;
+    for (int idx = 0; idx < len;) {
+      if (idx + 2 < len && clouds.get(idx + 2) == 0) {
+        idx = idx + 2;
       } else {
-        i++;
+        idx++;
       }
 
       count++;

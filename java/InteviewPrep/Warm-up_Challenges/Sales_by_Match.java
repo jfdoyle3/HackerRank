@@ -12,14 +12,6 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'sockMerchant' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. INTEGER n
-     *  2. INTEGER_ARRAY ar
-     */
 
     public static int sockMerchant(int n, List<Integer> ar) {
         
@@ -27,12 +19,12 @@ class Result {
         int count=0;
         int len=ar.size()-1;
         
-       for (int j = 0; j < n-1; j++) 
+       for (int idx = 0; idx < n-1; idx++) 
        {
-           if (ar.get(j)==ar.get(j+1))
+           if (ar.get(idx)==ar.get(idx+1))
            {
               count++;
-              j++;
+              idx++;
            } 
        }
          return count;

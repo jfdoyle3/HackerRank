@@ -12,22 +12,16 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'countingValleys' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. INTEGER steps
-     *  2. STRING path
-     */
-
     public static int countingValleys(int steps, String path) {
         
         int hiker=0;
         int valleys=0;
         for (char chr : path.toCharArray()) {
-            if (chr == 'U') hiker++;
-            if (chr == 'D') hiker--;
+            if (chr == 'U')
+				hiker++;
+			
+            if (chr == 'D')
+				hiker--;
            
             if(hiker == 0  && chr == 'U')
                 valleys++;
