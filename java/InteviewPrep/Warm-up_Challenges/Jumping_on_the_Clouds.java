@@ -14,11 +14,11 @@ class Result {
 
 
     public static int jumpingOnClouds(List<Integer> clouds) {
-    int len = clouds.size();
+    int size = clouds.size();
     int count = -1;
 
-    for (int idx = 0; idx < len;) {
-      if (idx + 2 < len && clouds.get(idx + 2) == 0) {
+    for (int idx = 0; idx < size;) {
+      if (idx + 2 < size && clouds.get(idx + 2) == 0) {
         idx = idx + 2;
       } else {
         idx++;
