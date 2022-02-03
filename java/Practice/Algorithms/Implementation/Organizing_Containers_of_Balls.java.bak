@@ -30,8 +30,8 @@ class Result {
         int colLen=container.size();
         
         do{
-            for(int row=0; idx<rowLen; row++)
-                rowTotal+=container.get(colLen-1).get(row);
+            for(int idx=0; idx<rowLen; idx++)
+                rowTotal+=container.get(colLen-1).get(idx);
                 
             bins.add(rowTotal);
             rowTotal=0;
