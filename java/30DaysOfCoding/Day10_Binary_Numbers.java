@@ -12,8 +12,8 @@ public class Solution {
 
             List<Integer> binaryNum = new ArrayList<>();
             int counter=0;
-             int total = 0;
-             List<Integer> count = new ArrayList<>();
+            int total = 0;
+            List<Integer> count = new ArrayList<>();
 
              while (baseTen>0){
                 int quotient = baseTen /2;
