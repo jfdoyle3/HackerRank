@@ -3,12 +3,10 @@ if __FILE__ ==$0
     test_cases=gets.chomp().to_i
     test_cases.times do |test_cases|
         word=gets.chomp()
-        word_array=word.split("")
-        
-        word_array.length().times do |index|
-           # puts word_array[index] + " "+index.to_s
+        word.length().times do |index|
+             word.split("")
             if index%2==0
-                print word_array[index]
+                print word[index]
                 end    
             end
         
