@@ -39,9 +39,10 @@ public class Solution {
         if(months>1 && years==0)
             System.out.println(months*500);
         
-        if(years>0)
+        if(years>0{
             System.out.println(10000);
-            
+			return;
+        }
         if (days <0 || months <0 || years<0)
             System.out.println(0);
     }

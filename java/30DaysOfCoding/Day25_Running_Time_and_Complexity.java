@@ -1,30 +1,24 @@
 import java.io.*;
 import java.util.*;
-
 public class Solution {
-
-    public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        
-        int number=input.nextInt();
-        for (int idx=0; idx<number; idx++){
-            int count=0;
-            int testNumber=input.nextInt();
-            for (int idx2=2; idx2<=testNumber; idx2++){
-                int result=testNumber%idx2;
-                if(result==0){
-                    count++;
-                }
-             
-            } 
-            if (count==1){
-                    System.out.println("Prime");
-                } else {
-                    System.out.println("Not prime");
-                }
-         
+    static boolean isPrime(int testNum){
+        if(testNum == 1){
+            return false;
         }
-
+        for(int curNum = (int)Math.sqrt(testNum); curNum > 1; curNum--){
+            if(testNum % curNum == 0){
+                return false;
+            }
+        }
+        return true;   
     }
-
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner = new Scanner(System.in);
+        int tests = scanner.nextInt();
+        for(int i = 1; i <= tests; i++){
+            int testNum = scanner.nextInt();
+            System.out.println((isPrime(testNum) == true) ? "Prime" : "Not prime");
+        }
+    }
 }

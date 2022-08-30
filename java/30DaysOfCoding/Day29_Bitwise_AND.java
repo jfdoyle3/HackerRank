@@ -4,71 +4,65 @@ import java.security.*;
 import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.function.*;
 import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'bitwiseAnd' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER N
+     *  2. INTEGER K
+     */
+
+    public static int bitwiseAnd(int N, int K) {
+     
+       int results=0;
+        for(int a=1; a<N; a++){
+            for (int b=a+1; b<=N; b++){
+               int bitwise=a&b;
+                if(bitwise<K && results<bitwise){
+                    results=bitwise;
+                }
+                
+            }
+        }
+        return results;
+    }
+
+}
 
 public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-    static int bitwiseAnd(int n, int k) {
-        int[] sequence = new int[n];
-        HashMap<Integer,Integer> bitMap=new HashMap<>();
-        for (int seq = 0; seq < sequence.length; seq++) {
-            sequence[seq] = seq + 1;
-        }
-        int seqLength = sequence.length;
-        for (int idx = 0; idx < n; idx++) {
-            for (int idx2 = idx + 1; idx2 < n; idx2++) {
-                int a = sequence[idx];
-                int b = sequence[idx2];
+        int t = Integer.parseInt(bufferedReader.readLine().trim());
 
-                int bit = (a & b);
-            //    System.out.printf("A= %d & B= %d; A&B= %d\n",a, b, bit);
-                 if(bitMap.containsKey(bit)){
-                        bitMap.put(bit,bitMap.get(bit)+1);
-                    } else{
-                        bitMap.put(bit,1);
-                    }
-                }
-            
-        }
-       // System.out.println(bitMap.toString());
-        int results=findHighestNumber(bitMap);
-            return results;
-    }
-    
-    static int findHighestNumber(HashMap<Integer,Integer> hm){
-       // refactor this
-        List<Integer> getHighestKey=new ArrayList<Integer>();
-        if(hm.size()>1)
-            hm.remove(0);
-       for (Integer value : hm.values())
-       System.out.println("v: "+value);
-        for (Map.Entry<Integer,Integer> entry : hm.entrySet()){
-                if(entry.getValue()==Collections.max(hm.values()))
-                  getHighestKey.add(entry.getKey()); 
-        }
-         Collections.sort(getHighestKey);
-                  Collections.reverse(getHighestKey);
-                  System.out.println("highest: "+getHighestKey.get(0));
-            return getHighestKey.get(0);
-    }
+        IntStream.range(0, t).forEach(tItr -> {
+            try {
+                String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-    private static final Scanner scanner = new Scanner(System.in);
+                int count = Integer.parseInt(firstMultipleInput[0]);
 
-    public static void main(String[] args) {
-        int t = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+                int lim = Integer.parseInt(firstMultipleInput[1]);
 
-        for (int tItr = 0; tItr < t; tItr++) {
-            String[] nk = scanner.nextLine().split(" ");
+                int res = Result.bitwiseAnd(count, lim);
 
-            int n = Integer.parseInt(nk[0]);
+                bufferedWriter.write(String.valueOf(res));
+                bufferedWriter.newLine();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
-            int k = Integer.parseInt(nk[1]);
-            int countBits=bitwiseAnd(n,k);
-            System.out.println(countBits);
-            
-        }
-
-        scanner.close();
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
