@@ -22,17 +22,32 @@ class Result {
      */
 
     public static int getTotalX(List<Integer> a, List<Integer> b) {
-        
-        int maxNumListA=Collections.max(a);
-        int minNumListB=Collections.min(b);
-        
-        for(int idx=maxNumListA; idx<minNumListB; ++idx){
-            if(b.get(0)%idx==0)
-                System.out.print(idx+" ");
-        }
-        return 3;
+
+        List<Integer> listA=new ArrayList<>(Arrays.asList(2,4));
+    List<Integer> listB=new ArrayList<>(Arrays.asList(16,24,96));
+
+    Set<Integer> results=new HashSet<>();
+
+    int maxNumListA=Collections.max(listA);
+    int minNumListB=Collections.min(listB);
+
+
+
+      for (int i = maxNumListA; i <= minNumListB; ++i) {
+
+        for(int number : listB){
+
+            results.add(i);
+      }
+      System.out.println(results);
+    }
+    return 888;
     }
 
+    public list<Integer> numberFactored(int number, int factoredBy ){
+        if(number%factoredBy==0)
+            return number;
+    }
 }
 
 public class Solution {
