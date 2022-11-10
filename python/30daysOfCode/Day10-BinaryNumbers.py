@@ -17,9 +17,11 @@ if __name__ == '__main__':
     for number in binary:
         if int(number)==1:
             count+=1
-        if int(number)==0:
             if count>=results:
-                results=count
-            count=0
+              results=count
+        
+        if int(number)==0:
+          count=0
+        
             
-    print(results)       
+    print(results)
