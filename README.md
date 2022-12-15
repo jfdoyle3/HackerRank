@@ -7,9 +7,9 @@ Hacker Rank
 | Day 2: Operators                               | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day02_Operators.java  |      |        |        |
 | Day 3: Conditional Statements                  | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day03_Intro_to_Conditional_Statements.java |      |        |        |
 | Day 4: Class vs. Instance                      | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day03_Intro_to_Conditional_Statements.java|      |        |        |
-| Day 5: Loops                                   |                                                                                              |      |        |        |
-| Day 6: Let's Review                            |                                                                                              |      |        |        |
-| Day 7: Arrays                                  |                                                                                              |      |        |        |
+| Day 5: Loops                                   | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day05_Loops.java		|      |        |        |
+| Day 6: Let's Review                            | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day06_Lets_Review.java|      |        |        |
+| Day 7: Arrays                                  | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day07_%20Arrays.java	|      |        |        |
 | Day 8: Dictionaries and maps                   |                                                                                              |      |        |        |
 | Day 9: Recursion 3                             |                                                                                              |      |        |        |
 | Day 10: Binary Numbers                         |                                                                                              |      |        |        |
