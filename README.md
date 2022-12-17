@@ -12,8 +12,8 @@ Hacker Rank
 | Day 7: Arrays                                  | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day07_%20Arrays.java                       |      |        |        |
 | Day 8: Dictionaries and maps                   | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day08_Dictionaries_and_Maps.java           |      |        |        |
 | Day 9: Recursion 3                             | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day09_Recursion_3.java                     |      |        |        |
-| Day 10: Binary Numbers                         |                                                                                                                   |      |        |        |
-| Day 11: 2D-Arrays                              |                                                                                                                   |      |        |        |
+| Day 10: Binary Numbers                         | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day10_Binary_Numbers.java                  |      |        |        |
+| Day 11: 2D-Arrays                              | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day11_2D_Arrays.java                       |      |        |        |
 | Day 12: Inheritance                            |                                                                                                                   |      |        |        |
 | Day 13: Abstract Classes                       |                                                                                                                   |      |        |        |
 | Day 14: Scope                                  |                                                                                                                   |      |        |        |
