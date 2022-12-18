@@ -14,8 +14,8 @@ Hacker Rank
 | Day 9: Recursion 3                             | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day09_Recursion_3.java                     |      |        |        |
 | Day 10: Binary Numbers                         | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day10_Binary_Numbers.java                  |      |        |        |
 | Day 11: 2D-Arrays                              | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day11_2D_Arrays.java                       |      |        |        |
-| Day 12: Inheritance                            |                                                                                                                   |      |        |        |
-| Day 13: Abstract Classes                       |                                                                                                                   |      |        |        |
+| Day 12: Inheritance                            | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day12_Inheritance.java                     |      |        |        |
+| Day 13: Abstract Classes                       | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day13_Abstract_Classes.java                |      |        |        |
 | Day 14: Scope                                  |                                                                                                                   |      |        |        |
 | Day 15: Linked List                            |                                                                                                                   |      |        |        |
 | Day 16: Exceptions - String to Integer         |                                                                                                                   |      |        |        |
