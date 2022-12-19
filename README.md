@@ -16,10 +16,10 @@ Hacker Rank
 | Day 11: 2D-Arrays                              | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day11_2D_Arrays.java                       |      |        |        |
 | Day 12: Inheritance                            | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day12_Inheritance.java                     |      |        |        |
 | Day 13: Abstract Classes                       | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day13_Abstract_Classes.java                |      |        |        |
-| Day 14: Scope                                  |                                                                                                                   |      |        |        |
-| Day 15: Linked List                            |                                                                                                                   |      |        |        |
-| Day 16: Exceptions - String to Integer         |                                                                                                                   |      |        |        |
-| Day 17: More Exceptions                        |                                                                                                                   |      |        |        |
+| Day 14: Scope                                  | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day14_Scope.java							 |      |        |        |
+| Day 15: Linked List                            | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day15_Linked_List.java					 |      |        |        |
+| Day 16: Exceptions - String to Integer         | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day16_Exceptions_-_String_to_Integer.java	 |      |        |        |
+| Day 17: More Exceptions                        | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day17_More_Exceptions.java				 |      |        |        |
 | Day 18: Queues and Stacks                      |                                                                                                                   |      |        |        |
 | Day 19: Interfaces                             |                                                                                                                   |      |        |        |
 | Day 20: Sorting                                |                                                                                                                   |      |        |        |
