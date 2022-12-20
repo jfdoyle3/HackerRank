@@ -20,10 +20,10 @@ Hacker Rank
 | Day 15: Linked List                            | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day15_Linked_List.java					 |      |        |        |
 | Day 16: Exceptions - String to Integer         | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day16_Exceptions_-_String_to_Integer.java	 |      |        |        |
 | Day 17: More Exceptions                        | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day17_More_Exceptions.java				 |      |        |        |
-| Day 18: Queues and Stacks                      |                                                                                                                   |      |        |        |
-| Day 19: Interfaces                             |                                                                                                                   |      |        |        |
-| Day 20: Sorting                                |                                                                                                                   |      |        |        |
-| Day 21: Generics                               |                                                                                                                   |      |        |        |
+| Day 18: Queues and Stacks                      | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day18_Queues_and_Stacks.java				 |      |        |        |
+| Day 19: Interfaces                             | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day19_Interfaces.java						 |      |        |        |
+| Day 20: Sorting                                | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day20_Sorting.java						 |      |        |        |
+| Day 21: Generics                               | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day21_Generics.java						 |      |        |        |
 | Day 22: Binary Search Tree                     |                                                                                                                   |      |        |        |
 | Day 23: BST Level-Order Traversal              |                                                                                                                   |      |        |        |
 | Day 24: More Linked Lists                      |                                                                                                                   |      |        |        |
