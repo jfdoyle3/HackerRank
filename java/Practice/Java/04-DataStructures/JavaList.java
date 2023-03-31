@@ -20,11 +20,7 @@ public class Solution {
             if(query.equals("Insert")){
                 int index=scan.nextInt();
                 int number=scan.nextInt();
-                if(index>=list.size()){
-                    list.add(number);
-                }else{
-                    list.set(index,number);
-                    }
+                list.add(index,number);
                 }
             if(query.equals("Delete")){
                 int index=scan.nextInt();
