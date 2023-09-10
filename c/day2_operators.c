@@ -27,16 +27,11 @@ int parse_int(char*);
 
 void solve(double meal_cost, int tip_percent, int tax_percent) {
 
-    double tip=(meal_cost/100)*tip_percent;
-    double tax=(tip_percent/100)*meal_cost;
-    double total=meal_cost+tip+tax;
+    double tip=(meal_cost/100.0)*tip_percent;
+    double tax=(tax_percent/100.0)*meal_cost;
+    double total=round(meal_cost+tip+tax);
     
-    printf("%f",total);
-
-
-
-
-
+    printf("%.0f",total);
 }
 
 int main()
