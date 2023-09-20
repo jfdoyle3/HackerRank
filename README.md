@@ -2,7 +2,7 @@ Hacker Rank
 
 | 30 Days of Code                                | Java                                                                                                              	  | .Net | Python | Nodejs |    C     |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---- | ------ | ------ |  ------ |
-| Day 0: Hello World                             | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day00_HelloWorld.java                     	  |      |        |        |        |
+| Day 0: Hello World                             | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day00_HelloWorld.java                     	  |      |        |        |  https://github.com/jfdoyle3/HackerRank/blob/master/c/day0_helloworld.c      |
 | Day 1: Data Types                              | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day01_DataTypes.java                      	  |      |        |        |        |
 | Day 2: Operators                               | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day02_Operators.java                       	  |      |        |        |        |
 | Day 3: Conditional Statements                  | https://github.com/jfdoyle3/HackerRank/blob/master/java/30DaysOfCoding/Day03_Intro_to_Conditional_Statements.java 	  |      |        |        |        |
